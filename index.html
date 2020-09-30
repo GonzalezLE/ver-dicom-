@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>visualizador de imagenes dicom</title>
+</head>
+
+<body>
+
+  <div class="row" id="dicomview">
+    <div class="col-md-12">
+      <div
+        style="width:100%;height:702px;position:relative;color: white;display:inline-block;border-style: dashed; border-width: 1px; border-color:gray;"
+        oncontextmenu="return false" class='disable-selection noIbar' unselectable='on' onselectstart='return false;'
+        onmousedown='return false;'>
+        <div id="dicomImage" style="width:100% ;height:700px;top:0px;left:0px; position:absolute">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button onclick="downloadAndView()">
+    Probar
+  </button>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  <script>
+    window.cornerstoneWADOImageLoader || document.write(
+      '<script src="https://unpkg.com/cornerstone-wado-image-loader">\x3C/script>')
+  </script>
+  <script src="./dicomjs/cornerstone.min.js"></script>
+  <!-- <script src="./dicomjs/cornerstone.min.js.map"></script> -->
+  <script src="./dicomjs/cornerstoneMath.min.js"></script>
+  <script src="./dicomjs/cornerstoneTools.min.js"></script>
+  <!-- include the dicomParser library as the WADO image loader depends on it -->
+  <script src="./dicomjs/dicomParser.min.js"></script>
+  <!-- include the cornerstoneWADOImageLoader library -->
+  <script src="./dicomjs/initializeWebWorkers.js"></script>
+  <script src="./dicomjs/uids.js"></script>
+
+  <script src="./dicomjs/openJPEG-FixedMemory.js"></script>
+
+  <script src="./dicomjs/logica.js"></script>
+
+</body>
+
+</html>
